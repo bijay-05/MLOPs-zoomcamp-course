@@ -10,3 +10,10 @@ in docker file
 RUN pipenv install --system --deploy
 
 it is used to install dependencies in the system rather than creating virtual envs
+
+ADD codes /root/test
+
+ADD codes/code1.py codes/code2.py /root/test/
+
+when adding multiple source files or directories, there must be a / at 
+the end of the destination directory
